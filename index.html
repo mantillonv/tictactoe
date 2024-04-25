@@ -1,0 +1,67 @@
+<!-- Boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=SourceCodePro">
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="soundtrack" controls autoplay loop>
+        <source src="./sfx/soundtrack.mp3" type="audio/mpeg"></audio></source>
+    </audio>
+    <audio id="hover-sound">
+        <source src="./sfx/hover-sound.wav" type="audio/wav"></audio></source>
+    </audio>
+    <!-- Title -->
+    <div class="title">
+        <h1>Tic-Tac-Toe</h1>
+    </div>
+    <!-- Players -->
+    <div class="players">
+        <div class="player-info">
+            <p id="player-one-info">Player One X</p>
+            <p id="player-two-info">Player Two O</p>
+        </div>
+    </div>
+    <button type="button" id="open-modal">Change Names</button>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h4>Player Names</h4>
+            <form action="" method="post">
+                <label for="player-one">Player One</label>
+                <input type="text" id="player-one" required>
+                <label for="player-two">Player Two</label>
+                <input type="text" id="player-two" required>
+                <input type="button" id="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <!-- Board -->
+    <h3 id="game-status">Player One - Your Turn</h3>
+    <p id="replay"></p>
+    <div class="game">
+        <div class="board">
+            <button type="button" id="button1" class="board-button"></button>
+            <button type="button" id="button2" class="board-button middle-column"></button>
+            <button type="button" id="button3" class="board-button"></button>
+            <button type="button" id="button4" class="board-button middle-row"></button>
+            <button type="button" id="button5" class="board-button middle-column- middle-row"></button>
+            <button type="button" id="button6" class="board-button middle-row"></button>
+            <button type="button" id="button7" class="board-button"></button>
+            <button type="button" id="button8" class="board-button middle-column"></button>
+            <button type="button" id="button9" class="board-button"></button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>2024 mantillonv for <a href="https://www.theodinproject.com">The Odin Project</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

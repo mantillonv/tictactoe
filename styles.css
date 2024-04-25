@@ -1,0 +1,61 @@
+:root {
+    --font-family: "SourceCodePro", sans-serif;
+    --font-color: #2a3439;
+    --main-color: #faf9f6;
+    --sub-color: #d70040;
+    --accent-color: #6495ed;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--main-color);
+}
+
+audio {
+    opacity: 0.5;
+    display: flex;
+}
+
+.title {
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 8vh;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+    width: 300px;
+}
+
+.board-button {
+    height: 10vh;
+    width: 6vw;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+}

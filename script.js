@@ -34,10 +34,12 @@ function handleMove(buttonIndex) {
             // Display winner
             document.getElementById('game-status').textContent = `${currentPlayer === 1 ? playerOneName : playerTwoName} wins!`;
             isGameOver = true;
+            showResetModal(); // Show the reset modal when game is over
         } else if (moves === 9) {
             // If no winner and all cells are filled
             document.getElementById('game-status').textContent = "It's a draw!";
             isGameOver = true;
+            showResetModal(); // Show the reset modal when game is over
         } else {
             // Switch players
             currentPlayer = currentPlayer === 1 ? 2 : 1;
@@ -101,3 +103,30 @@ document.addEventListener('keydown', (event) => {
         document.getElementById('modal').style.display = 'none';
     }
 });
+
+// Function to show reset modal when game is over
+function showResetModal() {
+    const resetModal = document.getElementById('reset-modal');
+    resetModal.style.display = 'block';
+
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', resetGame);
+}
+
+// Reset game when clicking the reset button
+function resetGame() {
+    // Reset game state variables
+    currentPlayer = 1;
+    isGameOver = false;
+    moves = 0;
+    boardState.fill("");
+
+    // Clear the board buttons
+    boardButtons.forEach(button => button.textContent = "");
+
+    // Reset game status
+    document.getElementById('game-status').textContent = `${playerOneName} - Your Turn`;
+
+    // Hide the reset modal
+    document.getElementById('reset-modal').style.display = 'none';
+}

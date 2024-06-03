@@ -8,4 +8,4 @@ Create a **Tic-Tac-Toe game** by using as little global code as possible.
 - Enable name input, game start/restart buttons and a result display to the interface.
 
 <h2>Screenshot:</h2>
-<img src="./images/thumbnail.png" alt="Screenshot Sample">
+<img src="./img/thumbnail.png" alt="Screenshot Sample">
